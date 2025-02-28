@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    input[type="text"], input[type="email"], input[type="number"], select, textarea {
+      width: 100%;
+      padding: 5px; 
+      margin: 4px 0;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 80px;
+      resize: none;
+    }
+
+    .hobbies {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>STUDENT REGISTRATION FORM</h2>
+    <form action="#" method="post">
+      <table>
+        <tr>
+          <td>FIRST NAME</td>
+          <td><input type="text" name="first_name" maxlength="30" placeholder="max 30 characters a-z and A-Z"></td>
+        </tr>
+        <tr>
+          <td>Middle NAME</td>
+          <td><input type="text" name="middle_name" maxlength="30" placeholder="max 30 characters a-z and A-Z"></td>
+        </tr>
+        <tr>
+          <td>LAST NAME</td>
+          <td><input type="text" name="last_name" maxlength="30" placeholder="max 30 characters a-z and A-Z"></td>
+        </tr>
+        <tr>
+          <td>DATE OF BIRTH</td>
+          <td>
+            <select name="day">
+              <option value="">Day</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">10</option>
+              <!-- Add more days as needed -->
+            </select>
+            <select name="month">
+              <option value="">Month</option>
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <!-- Add more months -->
+            </select>
+            <select name="year">
+              <option value="">Year</option>
+              <option value="2000">2000</option>
+              <option value="2001">2004</option>
+              <!-- Add more years -->
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>EMAIL ID</td>
+          <td><input type="email" name="email" placeholder="Enter your email"></td>
+        </tr>
+        <tr>
+          <td>MOBILE NUMBER</td>
+          <td><input type="text" name="mobile" maxlength="10" placeholder="10 digit number"></td>
+        </tr>
+        <tr>
+          <td>GENDER</td>
+          <td>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+          </td>
+        </tr>
+        <tr>
+          <td>ADDRESS</td>
+          <td><textarea name="address" placeholder="Enter your address"></textarea></td>
+        </tr>
+        <tr>
+          <td>CITY</td>
+          <td><input type="text" name="city" maxlength="30" placeholder="max 30 characters a-z and A-Z"></td>
+        </tr>
+        <tr>
+          <td>PIN CODE</td>
+          <td><input type="text" name="pin_code" maxlength="6" placeholder="6 digit number"></td>
+        </tr>
+        <tr>
+          <td>STATE</td>
+          <td><input type="text" name="state" maxlength="30" placeholder="max 30 characters a-z and A-Z"></td>
+        </tr>
+        <tr>
+          <td>COUNTRY</td>
+          <td><input type="text" name="country" value="India" readonly></td>
+        </tr>
+        <tr>
+          <td>HOBBIES</td>
+          <td class="hobbies">
+            <input type="checkbox" name="hobbies" value="Coding"> Coding
+            <input type="checkbox" name="hobbies" value="Blog-Writing"> Blog-Writing
+            <input type="checkbox" name="hobbies" value="Hacking"> Hacking
+            <input type="checkbox" name="hobbies" value="Cricket"> Cricket
+            <input type="checkbox" name="hobbies" value="Others"> Others
+            <input type="text" name="other_hobby" placeholder="Specify">
+          </td>
+        </tr>
+        <tr>
+          <td>QUALIFICATION</td>
+          <td>
+            <table border="1" width="100%">
+              <tr>
+                <th>Sl.No.</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text" name="board_x" maxlength="10"></td>
+                <td><input type="text" name="percentage_x" maxlength="5"></td>
+                <td><input type="text" name="year_x" maxlength="4"></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text" name="board_xii" maxlength="10"></td>
+                <td><input type="text" name="percentage_xii" maxlength="5"></td>
+                <td><input type="text" name="year_xii" maxlength="4"></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Graduation</td>
+                <td><input type="text" name="board_grad" maxlength="10"></td>
+                <td><input type="text" name="percentage_grad" maxlength="5"></td>
+                <td><input type="text" name="year_grad" maxlength="4"></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Masters</td>
+                <td><input type="text" name="board_masters" maxlength="10"></td>
+                <td><input type="text" name="percentage_masters" maxlength="5"></td>
+                <td><input type="text" name="year_masters" maxlength="4"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>COURSES APPLIED FOR</td>
+          <td>
+            <input type="radio" name="course" value="B.Tech"> B.Tech
+            <input type="radio" name="course" value="M.Tech"> M.Tech
+            <input type="radio" name="course" value="PhD"> PhD
+            <input type="radio" name="course" value="MS"> MS
+          </td>
+        </tr>
+      </table>
+      <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
